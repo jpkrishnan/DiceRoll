@@ -7,7 +7,9 @@ public class Solution {
 	public Solution() {
 		
 	}
-
+/*
+* This routine will find the top digit to which other dice should be moved to.
+*/
 	public int findTopDigit(int[] A) {
 		HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
 		for (int i=0; i<A.length; i++) {
@@ -64,6 +66,10 @@ public class Solution {
 		return dupDigit;
 	}
 	
+	/*
+	*	This routine will reduce the current Map by eliminating the any opposite digit pairs
+	*	like (1,6) (2,5) and (3,4)
+	*/
 	public HashMap<Integer,Integer> reduceArray(HashMap<Integer,Integer> map, int size) {
 
 		for(Map.Entry<Integer,Integer> entry : map.entrySet()) {
